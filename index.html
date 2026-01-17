@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cli-mates | Your Weather Companion</title>
+        <link rel="stylesheet" href="./src/public/styles/style.css">
+        <link rel="icon" href="./src/public/images/cloud-sun-rain.png" type="image/icon">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+            rel="stylesheet"
+        >
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        >
+        <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    </head>
+
+    <body>
+        <header>
+            <h1>
+               <svg xmlns="http://www.w3.org/2000/svg" 
+                    width="70" 
+                    height="70" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    stroke-width="2" 
+                    stroke-linecap="round" 
+                    stroke-linejoin="round" 
+                    class="lucide lucide-cloud-sun-rain-icon lucide-cloud-sun-rain"
+                    >
+                    <path d="M12 2v2"/>
+                    <path d="m4.93 4.93 1.41 1.41"/>
+                    <path d="M20 12h2"/>
+                    <path d="m19.07 4.93-1.41 1.41"/>
+                    <path d="M15.947 12.65a4 4 0 0 0-5.925-4.128"/>
+                    <path d="M3 20a5 5 0 1 1 8.9-4H13a3 3 0 0 1 2 5.24"/>
+                    <path d="M11 20v2"/>
+                    <path d="M7 19v2"/>
+                </svg>Cli-mates
+            </h1>
+            <p>Your weather companion.</p>
+        </header>
+        <main>
+            <section class="hero">
+                <div class="hero-divider">
+                    <section class="date-location">
+                        <div>
+                            <h2 id="locationName">Loading...</h2>
+                            <p id="currentDate">Loading</p>
+                        </div>
+                    </section>
+                    <section class="weather-info">
+                        <div class="temperature">
+                            <h2 id="currentTemp">--</h2>
+                            <p id="weatherSummary">--</p>
+                            <p class="description" id="feelsLike">Feels like --°C</p>
+                        </div>
+                        <div class="weather-icon" id="currentWeatherIcon">
+                            <i class="ph ph-circle-notch"></i>
+                        </div>
+                    </section>
+                </div>
+                <hr />
+                <section class="additional-metrics">
+                    <ul class="metric-1">
+                        <i class="ph ph-drop-half"></i>
+                        <div class="metric">
+                            <p>Humidity</p>
+                            <h3 id="perCentage">-%</h3>
+                        </div><br />
+                        <i class="ph ph-wind"></i>
+                        <div class="metric">
+                            <p>Wind Speed</p>
+                            <h3 id="speedMeter">- km/h</h3>
+                        </div>
+                    </ul>
+                    <ul class="metric-2">
+                        <i class="ph ph-eye"></i>
+                        <div class="metric">
+                            <p>Visibility</p>
+                            <h3 id="visionRange">- km</h3>
+                        </div><br />
+                        <i class="ph ph-umbrella"></i>
+                        <div class="metric">
+                            <p>Rain Chance</p>
+                            <h3 id="presSure">-- %</h3>
+                        </div>
+                    </ul>
+                </section>
+            </section>
+            <section class="today-forecast">
+                <h2>Today's Forecast</h2>
+                <div class="forecast-cards" id="hourlyForecastContainer"></div>
+            </section>
+            <section class="seven-day-forecast">
+                <h2>7-Day Forecast</h2>
+                <div class="forecast-days" id="dailyForecastContainer"></div>
+            </section>
+        </main>
+        <button id="backToTopBtn" title="Back to Top"><i class="ph ph-arrow-up"></i></button>
+        <footer>
+            <p>&copy; 2026 CliMates. nramlhsym. All rights reserved.</p>
+        </footer>
+        <script src="./src/scripts/script.js"></script>
+    </body>
+
+</html>
