@@ -1,11 +1,11 @@
-# 🌦️ Cli-mates - Your Weather Companion
+# 🌦️ Cli-matez - Your Weather Companion
 
-**Cli-mates** adalah aplikasi cuaca berbasis web yang dirancang dengan antarmuka modern, responsif, dan elegan. Aplikasi ini menyajikan data cuaca real-time, prakiraan per jam, dan prediksi 7 hari ke depan menggunakan data akurat dari **National Weather Service (NWS) API**.
+**Cli-matez** adalah aplikasi cuaca berbasis web yang dirancang dengan antarmuka modern, responsif, dan elegan. Aplikasi ini menyajikan data cuaca real-time, prakiraan per jam, dan prediksi 7 hari ke depan menggunakan data akurat dari **National Weather Service (NWS) API**.
 
-![Cli-mates Banner](src/public/images/banner-preview.png)
+![Cli-matez Banner](src/public/images/banner-preview.png)
 
 ## 🚀 Live Demo
-(https://climates.netlify.app/)
+(https://cli-matez.netlify.app/)
 
 ---
 
@@ -81,7 +81,7 @@ Selama pengembangan, beberapa tantangan teknis utama yang berhasil diselesaikan 
 
 1.  **Clone repositori:**
     ```bash
-    git clone [https://github.com/hisyamuel/cli-mates-app.git](https://github.com/hisyamuel/cli-mates-app.git)
+    git clone [https://github.com/hisyamuel/climatez-app.git](https://github.com/hisyamuel/climatez-app.git)
     ```
     
 2.  **Buka Project:**
@@ -94,11 +94,11 @@ Selama pengembangan, beberapa tantangan teknis utama yang berhasil diselesaikan 
 Project ini dikembangkan oleh:
 
 **Nur Amali Hisyam**
-*Mahasiswa Universitas Terbuka | Web Development Enthusiast*
+| *Mahasiswa Universitas Terbuka | Web Development Enthusiast*
 
 * **Portfolio:** [nramlhsym.netlify.app](https://nramlhsym.netlify.app/)
 * **GitHub:** [github.com/hisyamuel](https://github.com/hisyamuel) 
 * **LinkedIn:** [linkedin.com/in/nuramalihisyam](https://linkedin.com/in/nuramalihisyam) 
 
 ---
-*© 2026 Cli-mates. Created with passion & goon.*
+*© 2026 Cli-matez. Created with passion & goon.*
