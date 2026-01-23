@@ -124,10 +124,10 @@ h2 {
 }
 
 .ph-cloud-sun {
-    color: linear-gradient(to up right, lightgray, yellow);
+    color: rgb(214, 211, 127);
 }
 
-.ph-snowflake {
+.ph-snowflake, .ph-waves {
     color: white;
 }
 
