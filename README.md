@@ -1,6 +1,6 @@
 # 🌦️ Cli-matez - Your Weather Companion
 
-**Cli-matez** adalah aplikasi cuaca berbasis web yang dirancang dengan antarmuka modern, responsif, dan elegan. Aplikasi ini menyajikan data cuaca real-time, prakiraan per jam, dan prediksi 7 hari ke depan menggunakan data akurat dari **National Weather Service (NWS) API**.
+**Cli-matez** adalah aplikasi cuaca berbasis web yang dirancang dengan antarmuka modern, responsif, dan elegan. Aplikasi ini menyajikan data cuaca real-time, prakiraan per jam, dan prediksi 7 hari ke depan menggunakan data akurat dari **Open-Meteo API** serta akses lokasi dari **BigDataCloud API**.
 
 ![Cli-matez Banner](src/public/images/banner-preview.png)
 
@@ -13,7 +13,6 @@
 
 ### 1. Real-Time Weather Data
 * Menampilkan suhu saat ini, deskripsi cuaca (Cerah, Berawan, Hujan), dan lokasi.
-* **Smart Conversion:** Konversi otomatis dari satuan Imperial (Fahrenheit/Miles) bawaan API menjadi Metric (Celsius/Kilometer) agar ramah pengguna global.
 
 ### 2. Comprehensive Metrics
 Menampilkan detail parameter cuaca penting:
@@ -28,7 +27,6 @@ Menampilkan detail parameter cuaca penting:
 
 ### 4. 7-Day Forecast
 * Prakiraan jangka panjang untuk satu minggu ke depan.
-* **Smart Date Parsing:** Mengubah format tanggal API (misal: "M.L. King Day") menjadi nama hari standar (Senin, Selasa, dst) menggunakan JavaScript `Date` object.
 
 ---
 
@@ -50,7 +48,7 @@ Proyek ini dibangun dengan pendekatan **Mobile-First** dan prinsip desain modern
 * **Frontend:** HTML5, CSS3 (Custom Properties, Flexbox, Grid).
 * **Logic:** Vanilla JavaScript (ES6+).
 * **Data Fetching:** Fetch API, Async/Await, Promise.all (untuk memuat data harian dan per jam secara paralel).
-* **API Provider:** [National Weather Service API (weather.gov)](https://www.weather.gov/documentation/services-web-api).
+* **API Provider:** [Open-Meteo API](https://open-meteo.com/) & [BigDataCloud API](https://api.bigdatacloud.net/).
 * **Icons:** [Phosphor Icons](https://phosphoricons.com/).
 
 ---
@@ -70,10 +68,6 @@ Selama pengembangan, beberapa tantangan teknis utama yang berhasil diselesaikan 
 3.  **Data Accuracy (Hourly vs Daily):**
     * *Masalah:* Data *Humidity* sering muncul `undefined` saat menggunakan endpoint *Daily Forecast*.
     * *Solusi:* Mengalihkan sumber data "Saat Ini" menggunakan endpoint *Hourly Forecast* (`periods[0]`) yang menyediakan data real-time lebih lengkap.
-
-4.  **API Data Fallback:**
-    * *Masalah:* API NWS endpoint `/forecast` seringkali tidak menyediakan data *Pressure* atau *Visibility*.
-    * *Solusi:* Membuat logika kondisional JavaScript untuk menampilkan "Rain Chance" (Peluang Hujan) sebagai pengganti data *Pressure* yang kosong, agar UI tetap informatif.
 
 ---
 
