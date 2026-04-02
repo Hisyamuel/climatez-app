@@ -89,7 +89,7 @@ function renderCurrentWeather(weatherData, geoData) {
     locationElement.innerText = geoData.city || geoData.locality || "Lokasi Tidak Diketahui";
 
     // Update Tanggal
-    const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+    const options = { weekday: "long", month: "long", day: "numeric"};
     dateElement.innerText = new Date().toLocaleDateString("en-US", options);
     
     // Update Suhu Saat Ini (Open-Meteo sudah default Celsius)
@@ -180,12 +180,12 @@ function getWeatherInfo(code) {
         case 1: case 2: case 3: 
             return { icon: 'ph-cloud-sun', desc: 'Partly cloudy' };
         case 45: case 48: 
-            return { icon: 'ph-waves', desc: 'Fog' }; 
+            return { icon: 'ph-cloud-fog', desc: 'Fog' }; 
         case 51: case 53: case 55: case 56: case 57:
             return { icon: 'ph-cloud-rain', desc: 'Drizzle' };
         case 61: case 63: case 65: case 66: case 67:
         case 80: case 81: case 82:
-            return { icon: 'ph-cloud-showers-heavy', desc: 'Rain' };
+            return { icon: 'ph-cloud-rain', desc: 'Rain' };
         case 71: case 73: case 75: case 77:
         case 85: case 86:
             return { icon: 'ph-snowflake', desc: 'Snow' };
