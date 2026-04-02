@@ -89,7 +89,7 @@ function renderCurrentWeather(weatherData, geoData) {
     locationElement.innerText = geoData.city || geoData.locality || "Lokasi Tidak Diketahui";
 
     // Update Tanggal
-    const options = { weekday: "long", month: "long", day: "numeric"};
+    const options = { weekday: "long", month: "long", day: "numeric", year: "numeric" };
     dateElement.innerText = new Date().toLocaleDateString("en-US", options);
     
     // Update Suhu Saat Ini (Open-Meteo sudah default Celsius)
